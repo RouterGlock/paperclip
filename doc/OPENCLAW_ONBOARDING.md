@@ -18,13 +18,13 @@ Open the printed `Dashboard URL` (includes `#token=...`) in your browser.
 
 3. Find your company id.
 ```bash
-pnpm paperclipai company list --json
+npx paperclipai company list --json
 ```
 
 4. Use the OpenClaw invite prompt flow.
 - The Invites tab only creates human invites, and `openclaw_gateway` is not listed in the new-agent picker. Create the OpenClaw invite from the CLI:
 ```bash
-pnpm paperclipai openclaw invite-prompt --company-id <company-id> --payload-json '{}' --json
+npx paperclipai openclaw invite-prompt --company-id <company-id> --payload-json '{}' --json
 ```
 - The same invite is available as `POST /api/companies/{companyId}/openclaw/invite-prompt` with body `{}`.
 - Open the returned `onboardingTextUrl` and copy the text, or copy `inviteMessage` when it is set.
