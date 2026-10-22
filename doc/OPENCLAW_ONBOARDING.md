@@ -18,11 +18,11 @@ Open the printed `Dashboard URL` (includes `#token=...`) in your browser.
 
 3. Find your company id.
 ```bash
-pnpm paperclipai company list --json | jq '.[] | {id, name, issuePrefix}'
+pnpm paperclipai company list --json
 ```
 
 4. Use the OpenClaw invite prompt flow.
-- The Invites tab and the new-agent picker only create human invites and local adapters, and `openclaw_gateway` is not listed in the picker. Create the OpenClaw invite from the CLI:
+- The Invites tab only creates human invites, and `openclaw_gateway` is not listed in the new-agent picker. Create the OpenClaw invite from the CLI:
 ```bash
 pnpm paperclipai openclaw invite-prompt --company-id <company-id> --payload-json '{}' --json
 ```
